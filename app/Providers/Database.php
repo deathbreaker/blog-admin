@@ -6,7 +6,7 @@
  * Date: 13.4.2018
  * Time: 10:24
  */
-namespace Badassprof\DataProvider;
+namespace Badassprof\Providers;
 
 class Database {
 

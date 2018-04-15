@@ -1,25 +1,48 @@
 <?php
 
-use Jenssegers\Blade\Blade;
 
-function redirectTo($url, $permanent = false) {
-    header('Location: ' . $url, true, $permanent ? 301 : 302);
-    exit();
-}
+use Badassprof\Controllers\ArticleController;
+use Badassprof\Providers\TemplateEngine;
 
-Route::get('/', function()
-{
-    return 'I Am Badassprof from root URI';
+
+Route::get('/', function() {
+    return TemplateEngine::getBlade()->make('index');
+});
+
+Route::prefix('article')->group(function () {
+
+
+    Route::get('/', function (){
+        $articles = ArticleController::all();
+        return TemplateEngine::getBlade()->make('articles.all', $articles);
+    });
+
+    Route::get('/create', function (){
+        return TemplateEngine::getBlade()->make('articles.new');
+    });
+
+    Route::get('/show/{id}', function ($id){
+        $article = ArticleController::show($id);
+        return TemplateEngine::getBlade()->make('articles.show', $article);
+    });
+
+    Route::post('/store', function () {
+        ArticleController::store();
+        Gears\Router::redirectTo('/articles');
+    });
+
+    Route::delete('/delete/{id}', function ($id) {
+        ArticleController::delete($id);
+        Gears\Router::redirectTo('/articles');
+    });
+
+    Route::patch('/update/{id}', function ($id) {
+        ArticleController::update($id);
+        Gears\Router::redirectTo('/articles');
+    });
+
+
 });
 
 
-Route::get('/article/create', function (){
-    $blade = new Blade('view', 'cache');
-    return $blade->make('new');
-});
-
-Route::post('/article/store', function () {
-    Badassprof\Article\Controllers\ArticleController::store();
-    return redirectTo('/');
-});
 

@@ -1,24 +1,16 @@
 <?php
 
-namespace Badassprof\Article\Controllers;
+namespace Badassprof\Controllers;
 
 
-use Badassprof\DataProvider\Database;
+use Badassprof\Providers\Database;
 
 class ArticleController{
 
-    public static $db;
+    private static $db;
     private static $conn;
-    /**
-     * Matches /article exactly
-     *
-     * @Route("/article/create", name="article_create")
-     */
-    public function create(){
-        $blade = new Blade('view', 'cache');
-        return $blade->make('new');
-    }
 
+    public static function all(){}
 
     public static function store(){
 
@@ -44,6 +36,12 @@ class ArticleController{
         }
     }
 
+
+    public static function delete($id){}
+
+    public static function update($id){}
+
+    public static function show($id){}
 }
 
 

@@ -13,7 +13,7 @@ DebugClassLoader::enable();
 ErrorHandler::register();
 
 $router = new Gears\Router();
-$router->routesPath = 'routes/routes.php';
+$router->routesPath =  __DIR__ . '/routes/routes.php';
 $router->dispatch();
 
 

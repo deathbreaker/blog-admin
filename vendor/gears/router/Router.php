@@ -287,6 +287,11 @@ class Router extends Container
         return $this->install();
     }
 
+    public static function redirectTo($url,  $permanent = false){
+        header('Location: ' . $url, true, $permanent ? 301 : 302);
+        exit();
+    }
+
     /**
      * Method: __call
      * =========================================================================
