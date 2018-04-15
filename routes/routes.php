@@ -19,6 +19,7 @@ Route::get('/article/create', function (){
 });
 
 Route::post('/article/store', function () {
+    Badassprof\Article\Controllers\ArticleController::store();
     return redirectTo('/');
 });
 
