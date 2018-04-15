@@ -1,0 +1,27 @@
+
+
+.container-customized{
+    width: 33% !important;
+}
+
+@media screen and (max-width: 480px)
+{
+    body {
+        background-color: lightgreen !important;
+    }
+
+    .container-customized{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 660px)
+ {
+    body {
+        background-color: red;
+    }
+
+    .container-customized{
+        width: 50% !important;
+    }
+}
