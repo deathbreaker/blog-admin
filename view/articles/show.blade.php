@@ -2,11 +2,7 @@
 
 @section('title', 'Vypsání článků')
 
-@section('sidebar')
-    @parent
-
-    <p>This is appended to the master sidebar.</p>
-@endsection
+@yield('navbar')
 
 @section('content')
     <div>Hello from show</div>

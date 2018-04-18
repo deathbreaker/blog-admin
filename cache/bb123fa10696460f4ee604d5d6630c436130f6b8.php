@@ -12,11 +12,6 @@
 </head>
 <body>
 
-
-<?php $__env->startSection('sidebar'); ?>
-    This is the master sidebar.
-<?php echo $__env->yieldSection(); ?>
-
 <?php echo $__env->yieldContent('content'); ?>
 
 

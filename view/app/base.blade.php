@@ -12,11 +12,6 @@
 </head>
 <body>
 
-
-@section('sidebar')
-    This is the master sidebar.
-@show
-
 @yield('content')
 
 

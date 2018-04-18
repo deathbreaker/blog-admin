@@ -15,12 +15,3 @@ ErrorHandler::register();
 $router = new Gears\Router();
 $router->routesPath =  __DIR__ . '/routes/routes.php';
 $router->dispatch();
-
-
-
-
-
-
-
-
-

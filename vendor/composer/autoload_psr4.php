@@ -40,6 +40,6 @@ return array(
     'Gears\\Di\\' => array($vendorDir . '/gears/di/src'),
     'Gears\\' => array($vendorDir . '/gears/router'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Common/Inflector'),
-    'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
-    'Badassprof\\' => array($baseDir . '/app'),
+    'Deathbreaker\\' => array($baseDir . '/app'),
+    '' => array($vendorDir . '/nesbot/carbon/src'),
 );

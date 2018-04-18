@@ -1,9 +1,9 @@
 <?php
 
-namespace Badassprof\Controllers;
+namespace Deathbreaker\Controllers;
 
 
-use Badassprof\Providers\Database;
+use Deathbreaker\Providers\Database;
 
 class ArticleController{
 

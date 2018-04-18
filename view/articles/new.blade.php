@@ -1,12 +1,10 @@
 @extends('app.base')
+@include("components.navbar")
 
 @section('title', 'Přidání článku')
 
-@section('sidebar')
-    @parent
+@yield('navbar')
 
-    <p>This is appended to the master sidebar.</p>
-@endsection
 
 @section('content')
     <div class="container container-customized">
@@ -26,7 +24,7 @@
             <input type="text" class="form-control mb-3" id="author" name="autor">
 
 
-            <button type="submit" name="submit" class="btn btn-success"><i class="far fa-newspaper"></i> Publikovat</button>
+            <button type="submit" name="submit" class="btn btn-dark"><i class="far fa-newspaper"></i> Publikovat</button>
         </form>
     </div>
 

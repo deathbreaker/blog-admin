@@ -1,6 +1,6 @@
 <?php
 
-namespace Badassprof\Providers;
+namespace Deathbreaker\Providers;
 
 use Jenssegers\Blade\Blade;
 

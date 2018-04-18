@@ -1,10 +1,9 @@
+<?php echo $__env->make("components.navbar", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 <?php $__env->startSection('title', 'Přidání článku'); ?>
 
-<?php $__env->startSection('sidebar'); ?>
-    ##parent-placeholder-19bd1503d9bad449304cc6b4e977b74bac6cc771##
+<?php echo $__env->yieldContent('navbar'); ?>
 
-    <p>This is appended to the master sidebar.</p>
-<?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
     <div class="container container-customized">
@@ -24,7 +23,7 @@
             <input type="text" class="form-control mb-3" id="author" name="autor">
 
 
-            <button type="submit" name="submit" class="btn btn-success"><i class="far fa-newspaper"></i> Publikovat</button>
+            <button type="submit" name="submit" class="btn btn-dark"><i class="far fa-newspaper"></i> Publikovat</button>
         </form>
     </div>
 

@@ -1,8 +1,8 @@
 <?php
 
 
-use Badassprof\Controllers\ArticleController;
-use Badassprof\Providers\TemplateEngine;
+use Deathbreaker\Controllers\ArticleController;
+use Deathbreaker\Providers\TemplateEngine;
 
 
 Route::get('/', function() {
@@ -10,7 +10,6 @@ Route::get('/', function() {
 });
 
 Route::prefix('article')->group(function () {
-
 
     Route::get('/', function (){
         $articles = ArticleController::all();
@@ -33,13 +32,14 @@ Route::prefix('article')->group(function () {
 
     Route::delete('/delete/{id}', function ($id) {
         ArticleController::delete($id);
-        Gears\Router::redirectTo('/articles');
+        Gears\Router::redirectTo('/article');
     });
 
     Route::patch('/update/{id}', function ($id) {
         ArticleController::update($id);
-        Gears\Router::redirectTo('/articles');
+        Gears\Router::redirectTo('/article');
     });
+
 
 
 });

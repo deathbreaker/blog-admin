@@ -9,7 +9,6 @@ class ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
-        '7745382c92b7799bf1294b1f43023ba2' => __DIR__ . '/..' . '/tracy/tracy/src/shortcuts.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -64,14 +63,7 @@ class ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69
         'D' => 
         array (
             'Doctrine\\Common\\Inflector\\' => 26,
-        ),
-        'C' => 
-        array (
-            'Carbon\\' => 7,
-        ),
-        'B' => 
-        array (
-            'Badassprof\\' => 11,
+            'Deathbreaker\\' => 13,
         ),
     );
 
@@ -212,29 +204,14 @@ class ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
-        'Carbon\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-        'Badassprof\\' => 
+        'Deathbreaker\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
-    public static $classMap = array (
-        'Tracy\\Bar' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Bar.php',
-        'Tracy\\BlueScreen' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/BlueScreen.php',
-        'Tracy\\Bridges\\Nette\\TracyExtension' => __DIR__ . '/..' . '/tracy/tracy/src/Bridges/Nette/TracyExtension.php',
-        'Tracy\\Debugger' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Debugger.php',
-        'Tracy\\DefaultBarPanel' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/DefaultBarPanel.php',
-        'Tracy\\Dumper' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Dumper.php',
-        'Tracy\\FireLogger' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/FireLogger.php',
-        'Tracy\\Helpers' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Helpers.php',
-        'Tracy\\IBarPanel' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/IBarPanel.php',
-        'Tracy\\ILogger' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/ILogger.php',
-        'Tracy\\Logger' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/Logger.php',
-        'Tracy\\OutputDebugger' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/OutputDebugger.php',
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -242,7 +219,7 @@ class ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69::$classMap;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit36b0f65fa34d342f5bd144f40c035c69::$fallbackDirsPsr4;
 
         }, null, ClassLoader::class);
     }
